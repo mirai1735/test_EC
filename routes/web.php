@@ -11,6 +11,11 @@
 |
 */
 
+// ログイン画面
+Route::get('/login', 'UserController@login')->name('login');
+
+
+
 // ブログ一覧画面
 Route::get('/', 'BlogController@showList')->name('blogs');
 // ブログ登録画面
@@ -24,3 +29,5 @@ Route::get('blog/edit/{id}', 'BlogController@showEdit')->name('edit');
 Route::post('blog/update', 'BlogController@exeUpdate')->name('update');
 // ブログ削除
 Route::post('blog/delete/{id}', 'BlogController@exeDelete')->name('delete');
+
+
