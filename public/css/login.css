@@ -1,0 +1,52 @@
+.login_head {
+  height: 230px;
+}
+/* 「管理画面」の文字 */
+.login_head h3 {
+  line-height: 230px;
+  text-align: center;
+}
+
+
+/* inputコンテンツ */
+.login_body {
+  padding-top: 60px;
+  height: 500px;
+  background-color: #f4f4f4;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+.login_input {
+  border: 2px solid #959595;
+  height: 40px;
+}
+.login_btn {
+  border: 2px solid #5daea2;
+  background-color: #5daea2;
+  color: #fff;
+  height: 40px;
+  transition: .3s;
+}
+.login_btn:hover {
+  background-color: #fff;
+  color: #5daea2;
+  transition: .3s;
+}
+
+.login_th__login_id,
+.login_th__login_password {
+  position: relative;
+  width: 270px;
+}
+.login_th__login_id::before,
+.login_th__login_password::before {
+  position: absolute;
+  left: -50%;
+}
+
+.login_th__login_id::before {
+  content: 'ID';
+}
+.login_th__login_password::before {
+  content: 'パスワード';
+}
