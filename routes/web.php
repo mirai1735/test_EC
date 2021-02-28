@@ -12,7 +12,9 @@
 */
 
 // ログイン画面
-Route::get('/login', 'UserController@login')->name('login');
+Route::get('/login_form', 'UserController@login_form')->name('login_form');
+// ログイン画面
+Route::post('/login', 'UserController@login')->name('login');
 
 
 

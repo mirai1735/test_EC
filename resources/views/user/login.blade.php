@@ -9,7 +9,8 @@
 
 
 <section class="login_body">
-  <form action="" method="post" accept-charset="utf-8">
+  <form method="POST" action="{{ route('login') }}" accept-charset="utf-8">
+  @csrf
   <div class="">
 
     <table class="m-auto login_table">
