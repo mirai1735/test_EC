@@ -30,6 +30,7 @@ Route::post('blog/store', 'BlogController@exeStore')->name('store');
 Route::get('blog/{id}', 'BlogController@showDetail')->name('show');
 // ブログ編集画面
 Route::get('blog/edit/{id}', 'BlogController@showEdit')->name('edit');
+// ブログ更新
 Route::post('blog/update', 'BlogController@exeUpdate')->name('update');
 // ブログ削除
 Route::post('blog/delete/{id}', 'BlogController@exeDelete')->name('delete');
@@ -43,3 +44,8 @@ Route::get('test/index', 'TestController@showIndex')->name('testIndex');
 Route::get('test/edit/{id}', 'TestController@showEdit')->name('testEdit');
 //更新処理
 Route::post('test/update', 'TestController@exeUpdate')->name('testUpdate');
+//新規投稿画面
+Route::get('test/create', 'TestController@showCreate')->name('testCreate');
+//新規投稿処理
+Route::post('test/exeCreate', 'TestController@exeCreate')->name('testexeCreate');
+Route::post('test/delete/{id}', 'TestController@exeDelete')->name('exeDelete');

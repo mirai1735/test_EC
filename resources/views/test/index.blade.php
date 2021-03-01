@@ -24,14 +24,19 @@
         <th>{{ $test->content }}</th>
         <th>{{ $test->created_at }}</th>
         <th>{{ $test->updated_at }}</th>
-        <th><a href="/testEC/public/test/edit/{{ $test->id }}" type="button" class="btn">編集</a></th>
-        <th><button type="button" class="btn">削除</button></th>
+        <th><a href="/testEC/public/test/edit/{{ $test->id }}" type="button" class="btn btn-primary">編集</a></th>
+
+        <form action="{{ route('exeDelete', $test->id) }}" method="POST">
+          @csrf
+          <th><button type="submit" class="btn btn-danger">削除</button></th>
+        </form>
+
       </tr>
       @endforeach
     </tbody>
   </table>
 
-  {{ $test->id }}
+  <a href="{{ route('testCreate') }}" class="btn btn-success">新規投稿</a>
 
 </div>
 @endsection
