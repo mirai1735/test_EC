@@ -17,6 +17,8 @@ Route::get('/login_form', 'UserController@login_form')->name('login_form');
 Route::post('/login', 'UserController@login')->name('login');
 
 
+//==========================================================================
+
 
 // ブログ一覧画面
 Route::get('/', 'BlogController@showList')->name('blogs');
@@ -33,3 +35,11 @@ Route::post('blog/update', 'BlogController@exeUpdate')->name('update');
 Route::post('blog/delete/{id}', 'BlogController@exeDelete')->name('delete');
 
 
+//==========================================================================
+
+// テスト用（練習用）
+Route::get('test/index', 'TestController@showIndex')->name('testIndex');
+// テスト投稿編集画面
+Route::get('test/edit/{id}', 'TestController@showEdit')->name('testEdit');
+//更新処理
+Route::post('test/update', 'TestController@exeUpdate')->name('testUpdate');

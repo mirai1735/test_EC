@@ -26,7 +26,10 @@
       @foreach ($blogs as $blog)
       <tr>
         <td>{{ $blog->id }}</td>
-        <td><a href="/testEC/public/blog/{{ $blog->id }}">{{ $blog->title }}</a></td>
+        <td>
+          <a href="/testEC/public/blog/{{ $blog->id }}">{{ $blog->title }}</a>
+        </td>
+
         <td>{{ $blog->updated_at }}</td>
         <td><button type="button" class="btn btn-primary" onclick="location.href='/testEC/public/blog/edit/{{ $blog->id }}'">編集</button></td>
 
